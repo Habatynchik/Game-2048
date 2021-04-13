@@ -50,8 +50,9 @@ a {
 }
 
 #text {
-    margin: 30px;
+    margin: 15px 0;
     width: 500px;
+
 }
 
 .container {
@@ -97,4 +98,8 @@ a {
     border-radius: 3px;
     background: #EEE4DA59;
     color: #776e65;
+}
+
+#png{
+    width: 200px;
 }

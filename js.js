@@ -290,14 +290,23 @@ $(document).ready(function () {
     })
 
     $(document).keydown(function (e) { //right
+        //let prevState = array;
+        //console.log(prevState)
+        //console.log(array)
+
         if (e.which == 39) {
+
             createCopy();
 
             rightMove();
             rightCheck();
             rightMove();
 
+            //console.log(prevState)
+            //console.log(array)
+
             if (checkdd())
+            //if (prevState != array)
                 newRand();
         }
     })
