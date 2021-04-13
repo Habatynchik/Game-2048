@@ -1,0 +1,101 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #faf8ef;
+    color: #776e65;
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 45px;
+    margin: 20px;
+}
+
+.tittle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.score {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 30px;
+    margin: 20px;
+    background: #BBADA0;
+    color: white;
+    line-height: 0.7;
+    border-radius: 3px;
+}
+
+#score {
+    font-size: 30px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+
+}
+
+.bottom {
+
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+#text {
+    margin: 30px;
+    width: 500px;
+    height: 500px;
+}
+
+.container {
+    position: relative;
+    width: 483px;
+    height: 483px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    background: #BBADA0;
+}
+
+.row {
+    display: flex;
+}
+
+#restart {
+
+    background: #8f7a66;
+    border-radius: 6px;
+    padding: 0 20px;
+    color: #f9f6f2;
+    height: 40px;
+
+    cursor: pointer;
+
+
+    margin: 20px;
+}
+
+.cell {
+    height: 107px;
+    width: 107px;
+    line-height: 107px;
+    text-align: center;
+    margin: 6px;
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    border-radius: 3px;
+    background: #EEE4DA59;
+    color: #776e65;
+}
