@@ -352,6 +352,7 @@ $(document).ready(function () {
             if (confirm("You lose((((")) {
                 array = []
                 $("#restart").click();
+                score = 0;
             } else {
 
             }
