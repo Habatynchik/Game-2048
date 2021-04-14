@@ -285,6 +285,9 @@ $(document).ready(function () {
 
             if (checkdd())
                 newRand();
+
+            e.stopPropagation();
+            e.preventDefault();
         }
     })
 
@@ -299,6 +302,7 @@ $(document).ready(function () {
 
             if (checkdd())
                 newRand();
+
         }
     })
 
@@ -311,6 +315,9 @@ $(document).ready(function () {
 
             if (checkdd())
                 newRand();
+
+            e.stopPropagation();
+            e.preventDefault();
         }
     })
 
