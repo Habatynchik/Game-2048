@@ -127,6 +127,30 @@ $(document).ready(function () {
         }
     }
 
+    function checkLose() {
+        for (let i = 0; i < 4; i++) {
+            for (let j = 0; j < 4; j++) {
+                if (array[i][j] == 0) {
+                    return false
+                }
+            }
+        }
+        for (let i = 1; i < 3; i++) {
+            for (let j = 1; j < 3; j++) {
+                if (array[i][j] == array[i][j + 1])
+                    return false
+                if (array[i][j] == array[i][j - 1])
+                    return false
+                if (array[i][j] == array[i + 1][j])
+                    return false
+                if (array[i][j] == array[i - 1][j])
+                    return false
+            }
+        }
+
+        return true;
+    }
+
     function newRand() {
         let i = Math.floor((Math.random() * 4));
         let j = Math.floor((Math.random() * 4));
@@ -137,6 +161,7 @@ $(document).ready(function () {
         }
 
         refresh();
+
     }
 
     function downCheck() {
@@ -306,7 +331,7 @@ $(document).ready(function () {
             //console.log(array)
 
             if (checkdd())
-            //if (prevState != array)
+                //if (prevState != array)
                 newRand();
         }
     })
@@ -315,6 +340,18 @@ $(document).ready(function () {
     let prevState = [[], [], [], []];
 
     function checkdd() {
+
+        if (checkLose()) {
+            if (confirm("You lose((((")) {
+                array = []
+                $("#restart").click();
+            } else {
+
+            }
+
+            return false
+        }
+
         for (let i = 0; i < 4; i++) {
             for (let j = 0; j < 4; j++) {
                 if (prevState[i][j] !== array[i][j]) {
