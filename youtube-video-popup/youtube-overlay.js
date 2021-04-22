@@ -74,7 +74,7 @@
         if ($($this.overlayContainer).length === 0) {
             var o = $('<div class="videoPlayerOverlay hide hiddenTransform" id="youtubePlayerOverlay" data-hasloaded="false"></div>'),
                 cButton = $('<button id="youtubeOverlayCloser" class="defaultButton closeIcon">' +
-                    '<img src="x-mark-black-icon.svg" /></button>'),
+                    '<img width="10" height="10" src="x-mark-black-icon.svg" /></button>'),
                 b = $("body");
             cButton.appendTo(o);
             o.appendTo(b);
