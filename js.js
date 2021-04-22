@@ -1,4 +1,16 @@
 $(document).ready(function () {
+    new YoutubeOverlayModule
+    var img = $("#exampleImage");
+    var configObject = {
+        sourceUrl: img.attr("data-videourl"),
+        triggerElement: "#" + img.attr("id"),
+        progressCallback: function () {
+            console.log("Callback Invoked.");
+        }
+    };
+
+    var videoBuild = new YoutubeOverlayModule(configObject);
+    videoBuild.activateDeployment();
 
 
     let array = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]];
@@ -264,6 +276,7 @@ $(document).ready(function () {
 
     $("#restart").on('click', function () {
 
+        score = 0;
         array = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]];
         for (let i = 1; i <= 4; i++) {
             for (let j = 1; j <= 4; j++) {
@@ -348,15 +361,22 @@ $(document).ready(function () {
 
     function checkdd() {
 
+
         if (checkLose()) {
-            if (confirm("You lose((((")) {
-                array = []
-                $("#restart").click();
-                score = 0;
-            } else {
-
-            }
-
+            swal({
+                    title: "You lose",
+                    text: "Score: " + score,
+                    icon: "error",
+                    closeOnConfirm: true,
+                },
+                function (isConfirm) {
+                    if (isConfirm) {
+                        array = []
+                        $("#restart").click();
+                        score = 0;
+                    }
+                }
+            )
             return false
         }
 

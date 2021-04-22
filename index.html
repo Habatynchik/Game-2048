@@ -7,22 +7,36 @@
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" >
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="js.js" defer></script>
+
+    <script src="./youtube-video-popup/youtube-overlay.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="./youtube-video-popup/youtube-overlay.scss">
+    <link rel="stylesheet" type="text/css" href="./youtube-video-popup/youtube-overlay.css">
 </head>
 
 <body>
 
 
+
 <div class="tittle">
-    <h1 class="title">2048</h1>
+
+    <img src="unnamed.png" class="img-responsive center-block" alt="Example" title="Example" id="exampleImage"
+         data-videourl="https://www.youtube.com/embed/bxqLsrlakK8"/>
     <div class="score">
         SCORE
         <p id="score"></p>
     </div>
     <input type="button" value="RESTART" id="restart">
 </div>
+
+
 
 <div class="main">
 
