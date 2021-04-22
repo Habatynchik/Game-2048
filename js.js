@@ -287,74 +287,86 @@ $(document).ready(function () {
 
     })
 
-
-    $(document).keydown(function (e) { //down
-        if (e.which == 40) {
-            createCopy();
-
-            downMove();
-            downCheck();
-            downMove();
-
-            if (checkdd())
-                newRand();
-
+    $(document).keydown(function (e) {
+        if (e.which == 37) { //left
+            leftSwipe();
+        } else if (e.which == 40) { //down
+            downSwipe()
             e.stopPropagation();
             e.preventDefault();
-        }
-    })
-
-    $(document).keydown(function (e) { //left
-        if (e.which == 37) {
-
-
-            createCopy();
-            leftMove();
-            leftCheck();
-            leftMove();
-
-            if (checkdd())
-                newRand();
-
-        }
-    })
-
-    $(document).keydown(function (e) { //up
-        if (e.which == 38) {
-            createCopy();
-            upMove();
-            upCheck();
-            upMove();
-
-            if (checkdd())
-                newRand();
-
+        } else if (e.which == 38) { //up
+            upSwipe()
             e.stopPropagation();
             e.preventDefault();
+        } else if (e.which == 39) { //right
+            rightSwipe()
         }
     })
 
-    $(document).keydown(function (e) { //right
-        //let prevState = array;
-        //console.log(prevState)
-        //console.log(array)
+    function downSwipe() {
+        createCopy();
 
-        if (e.which == 39) {
+        downMove();
+        downCheck();
+        downMove();
 
-            createCopy();
+        if (checkdd())
+            newRand();
+    }
 
-            rightMove();
-            rightCheck();
-            rightMove();
+    function upSwipe() {
+        createCopy();
+        upMove();
+        upCheck();
+        upMove();
 
-            //console.log(prevState)
-            //console.log(array)
+        if (checkdd())
+            newRand();
+    }
 
-            if (checkdd())
-                //if (prevState != array)
-                newRand();
+    function rightSwipe() {
+        createCopy();
+        rightMove();
+        rightCheck();
+        rightMove();
+        if (checkdd())
+            newRand();
+    }
+
+    function leftSwipe() {
+        createCopy();
+        leftMove();
+        leftCheck();
+        leftMove();
+
+        if (checkdd())
+            newRand();
+    }
+
+    //swipeLeft, swipeRight, swipeUp, swipeDown
+    $("html").swipe({
+        //Generic swipe handler for all directions
+        swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+            switch (direction) {
+                case "left":
+                    leftSwipe();
+                    break;
+                case "right":
+                    rightSwipe()
+                    break;
+                case "up":
+                    upSwipe()
+                    break;
+                case "down":
+                    downSwipe()
+                    break
+
+            }
         }
-    })
+    });
+
+
+
 
 
     let prevState = [[], [], [], []];
@@ -401,4 +413,3 @@ $(document).ready(function () {
 
 })
 ;
-
