@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <title>2048</title>
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" >
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
 
     <script src="./youtube-video-popup/youtube-overlay.js" defer></script>
@@ -22,70 +23,75 @@
 </head>
 
 <body class="body">
+<div class="wrapper">
 
 
+    <div class="tittle">
 
-<div class="tittle">
-
-    <img src="unnamed.png" class="img-responsive center-block" alt="Example" title="Example" id="exampleImage"
-         data-videourl="https://www.youtube.com/embed/bxqLsrlakK8"/>
-    <div class="score">
-        SCORE
-        <p id="score"></p>
-    </div>
-    <input type="button" value="RESTART" id="restart">
-</div>
-
-
-
-<div class="main">
-
-    <div class="container">
-
-        <div class="cell" id="00"></div>
-        <div class="cell" id="01"></div>
-        <div class="cell" id="02"></div>
-        <div class="cell" id="03"></div>
-
-        <div class="cell" id="10"></div>
-        <div class="cell" id="11"></div>
-        <div class="cell" id="12"></div>
-        <div class="cell" id="13"></div>
-
-        <div class="cell" id="20"></div>
-        <div class="cell" id="21"></div>
-        <div class="cell" id="22"></div>
-        <div class="cell" id="23"></div>
-
-        <div class="cell" id="30"></div>
-        <div class="cell" id="31"></div>
-        <div class="cell" id="32"></div>
-        <div class="cell" id="33"></div>
-
+        <img src="unnamed.png" class="img-responsive center-block" alt="Example" title="Example" id="exampleImage"
+             data-videourl="https://www.youtube.com/embed/bxqLsrlakK8"/>
+        <div class="score">
+            SCORE
+            <p id="score"></p>
+        </div>
+        <input type="button" value="RESTART" id="restart">
     </div>
 
-</div>
 
-<div class="bottom main ">
-    <div id="text">
-        <strong>
-            HOW TO PLAY: Use your arrow keys to move the tiles. Tiles with the same number merge into one when they
-            touch. Add them up to reach 2048!</strong>
-        <p></p>
-        <hr>
-        <p></p>
-        <h3>
-            Created by <a href="https://www.instagram.com/habatynchlk/">Nikita Gamauinov</a> <br>
-            <a href="https://github.com/Habatynchik/Game-for-NULES-2048"> <img id="png" src="https://pngimg.com/uploads/github/github_PNG15.png"/ ></a>
-        </h3>
-        <h3>
+    <div class="main">
 
-        </h3>
+        <div class="container">
 
+            <div class="cell" id="00"></div>
+            <div class="cell" id="01"></div>
+            <div class="cell" id="02"></div>
+            <div class="cell" id="03"></div>
+
+            <div class="cell" id="10"></div>
+            <div class="cell" id="11"></div>
+            <div class="cell" id="12"></div>
+            <div class="cell" id="13"></div>
+
+            <div class="cell" id="20"></div>
+            <div class="cell" id="21"></div>
+            <div class="cell" id="22"></div>
+            <div class="cell" id="23"></div>
+
+            <div class="cell" id="30"></div>
+            <div class="cell" id="31"></div>
+            <div class="cell" id="32"></div>
+            <div class="cell" id="33"></div>
+
+        </div>
 
     </div>
 
+    <div class="bottom main ">
+        <div id="text">
+            <strong>
+                HOW TO PLAY: Use your arrow keys to move the tiles. Tiles with the same number merge into one when they
+                touch. Add them up to reach 2048!</strong>
+            <p></p>
+            <hr>
+            <p></p>
+            <h3>
+                Created by <a href="https://www.instagram.com/habatynchlk/">Nikita Gamauinov</a> <br>
+                <a href="https://github.com/Habatynchik/Game-for-NULES-2048"> <img id="png"
+                                                                                   src="https://pngimg.com/uploads/github/github_PNG15.png"/
+                    ></a>
+            </h3>
+            <h3>
+
+            </h3>
+
+
+        </div>
+
+    </div>
+
+
 </div>
+
 
 </body>
 </html>
